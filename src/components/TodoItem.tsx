@@ -13,11 +13,11 @@ const TodoItem: React.FC<TodoItemProps> = ({ id, title, createdAt, completed }) 
   const dispatch = useDispatch();
 
   const handleCompleteClick = () => {
-    dispatch(toggleTaskCompleted(id));
+    dispatch(toggleTaskCompleted({ id }));
   };
 
   const handleDeleteClick = () => {
-    dispatch(deleteTask(id));
+    dispatch(deleteTask({ id }));
   };
 
   return (

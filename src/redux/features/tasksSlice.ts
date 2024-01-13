@@ -4,7 +4,8 @@ import type { RootState } from '../store';
 interface Task {
   id: string;
   title: string;
-  createdAt: string; // Assuming you will format the date as a string in the component or action creator
+  createdAt: string;
+  completed: boolean;
 }
 
 interface TasksState {
@@ -32,14 +33,22 @@ export const tasksSlice = createSlice({
         const formattedDate = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`;
         const createdAt = `${formattedTime}, ${formattedDate}`;
         const id = nanoid(); // Generates unique id for each task
-        return { payload: { id, title, createdAt } };
+        return { payload: { id, title, createdAt, completed: false } };
       }
     },
-    // ... other actions like deleteTask, toggleTaskCompleted, etc.
+    toggleTaskCompleted: (state, action: PayloadAction<{ id: string }>) => {
+      const task = state.tasks.find(task => task.id === action.payload.id);
+      if (task) {
+        task.completed = !task.completed;
+      }
+    },
+    deleteTask: (state, action: PayloadAction<{ id: string }>) => {
+      state.tasks = state.tasks.filter(task => task.id !== action.payload.id);
+    },
   },
 });
 
-export const { addTask } = tasksSlice.actions;
+export const { addTask, toggleTaskCompleted, deleteTask } = tasksSlice.actions;
 
 export const selectAllTasks = (state: RootState) => state.tasks.tasks;
 

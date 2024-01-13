@@ -6,7 +6,7 @@ const AddTodoForm: React.FC = () => {
   const [title, setTitle] = useState('');
   const dispatch = useDispatch();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: Event) => {
     e.preventDefault();
     if (title) {
       dispatch(addTask(title));
@@ -19,7 +19,7 @@ const AddTodoForm: React.FC = () => {
       <input
         type="text"
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e) => setTitle((e.target as HTMLInputElement).value)}
         placeholder="What needs to be done?"
       />
       <button type="submit">Add Task</button>
