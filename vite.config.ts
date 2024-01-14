@@ -8,7 +8,6 @@ export default defineConfig({
     alias: {
       'react': 'preact/compat',
       'react-dom': 'preact/compat',
-      '@mui/styled-engine': '@mui/styled-engine-sc'
     }
   }
 });

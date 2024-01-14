@@ -14,6 +14,7 @@ import './style.css';
 export function Main() {
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Provider store={store}> {/* Wrap your components with Provider */}
         <LocationProvider>
           <main>

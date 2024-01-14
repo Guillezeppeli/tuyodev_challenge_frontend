@@ -16,13 +16,6 @@ const AddTodoForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={title}
-        onChange={(e) => setTitle((e.target as HTMLInputElement).value)}
-        placeholder="What needs to be done?"
-      />
-      <button type="submit">Add Task</button>
     </form>
   );
 };
