@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
 	
@@ -13,4 +16,6 @@
 	-webkit-text-size-adjust: 100%;
 }
 
-
+body {
+  @apply font-sans;
+}

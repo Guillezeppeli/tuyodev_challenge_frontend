@@ -28,18 +28,18 @@ const TodoList: React.FC = () => {
   
 
   return (
-    <div className="flex flex-col items-center my-20 mx-20 px-4 py-8 bg-slate-100">
-      <h2 className="text-4xl font-bold mb-6 text-black">TODO LIST</h2>
-      <form onSubmit={handleSubmit} className="flex w-full md:w-3/4 lg:w-1/2 justify-between mb-4">
-        <TextField
-          type="text"
-          placeholder="What needs to be done?"
-          value={taskTitle}
-          onChange={(e) => setTaskTitle(e.currentTarget.value)}
-          fullWidth
-          variant="outlined"
-          className="flex-grow mr-2"
-        />
+    <div className="flex flex-col items-center my-8 mx-4 px-4 py-8 bg-slate-100 sm:my-20 sm:mx-20">
+      <h2 className="text-4xl font-bold mb-6 text-slate-500 font-sans sm:text-4xl">TODO LIST</h2>
+      <form onSubmit={handleSubmit} className="flex flex-col w-full md:flex-row md:w-3/4 lg:w-1/2 justify-between mb-4 gap-5">
+      <TextField
+        type="text"
+        placeholder="What needs to be done?"
+        value={taskTitle}
+        onChange={(e) => setTaskTitle(e.currentTarget.value)}
+        fullWidth
+        variant="outlined"
+        className="flex-grow"
+      />
         <Button type="submit" variant="contained" color="primary">
           Add Task
         </Button>
