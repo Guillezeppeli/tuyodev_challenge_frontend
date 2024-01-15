@@ -1,4 +1,4 @@
-Ejemplo de aplicación frontend 'Todo List’ construida utilizando React/Typescript, Redux y vite.
+Ejemplo de aplicación frontend 'Todo List’ construida utilizando Preact/Typescript, Redux y vite.
 
 
 - Npm install
