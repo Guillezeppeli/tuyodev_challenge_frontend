@@ -39,6 +39,7 @@ const TodoList: React.FC = () => {
         fullWidth
         variant="outlined"
         className="flex-grow"
+        autoComplete="off"
       />
         <Button type="submit" variant="contained" color="primary">
           Add Task
