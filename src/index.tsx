@@ -1,5 +1,3 @@
-// src/index.tsx
-
 import { render } from 'preact';
 import { LocationProvider, Router, Route } from 'preact-iso';
 import { Provider } from 'react-redux'; // Import Provider from react-redux
@@ -15,7 +13,7 @@ export function Main() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Provider store={store}> {/* Wrap your components with Provider */}
+      <Provider store={store}>
         <LocationProvider>
           <main>
             <Router>

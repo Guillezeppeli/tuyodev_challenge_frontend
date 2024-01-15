@@ -12,6 +12,5 @@ describe('taskSlice', () => {
     const state = store.getState().tasks;
     expect(state.tasks).toHaveLength(1);
     expect(state.tasks[0].title).toEqual(newTaskTitle);
-    // Add more assertions as needed
   });
 });

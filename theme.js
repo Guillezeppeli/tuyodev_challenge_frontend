@@ -1,8 +1,5 @@
-// theme.js
-
 import { createTheme } from '@mui/material/styles';
 
-// Create a theme instance.
 const theme = createTheme({
   palette: {
     primary: {
@@ -21,15 +18,13 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: [
-      'Roboto', // Ensure Roboto is loaded in your index.html or is imported via CSS
+      'Roboto',
       '"Helvetica Neue"',
       'Arial',
       'sans-serif',
       'OpenSans'
     ].join(','),
-    // You can customize the typography as well
   },
-  // You can add more customizations here such as overrides, mixins, etc.
 });
 
 export default theme;

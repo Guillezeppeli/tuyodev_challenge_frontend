@@ -17,12 +17,12 @@ const TodoList: React.FC = () => {
   const handleAddTask = () => {
     if (taskTitle.trim()) {
       dispatch(addTask(taskTitle.trim()));
-      setTaskTitle(''); // Clear the input after adding the task
+      setTaskTitle('');
     }
   };
 
   const handleSubmit = (e: Event) => {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault();
     handleAddTask();
   };
   

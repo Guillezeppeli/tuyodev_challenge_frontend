@@ -1,5 +1,3 @@
-// src/pages/Home/App.tsx
-
 import { h } from 'preact';
 import AddTodoForm from '../../components/AddTodoForm';
 import TodoList from '../../components/TodoList';
